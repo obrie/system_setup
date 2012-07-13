@@ -3,6 +3,10 @@
 # - Internal / OpenDNS dns servers
 # - Wicd network manager
 source ./ubuntu/config.sh
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y wicd
+sudo adduser $USER netdev
+sudo apt-get remove -y network-manager
+sudo /etc/init.d/networking restart
 sudo sh -c "cat > /etc/network/interfaces <<EOF
 auto lo
 iface lo inet loopback
@@ -12,10 +16,6 @@ iface eth0 inet static
 address $IP_ADDRESS
 netmask 255.255.255.0
 gateway 192.168.1.1
+dns-nameservers $NAMESERVER1 $NAMESERVER2
 EOF
 "
-sudo rm /etc/resolv.conf
-sudo sh -c "echo \"nameserver $NAMESERVER1\nnameserver $NAMESERVER2\" > /etc/resolv.conf"
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y wicd
-sudo adduser $USER netdev
-sudo apt-get remove -y network-manager
