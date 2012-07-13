@@ -15,6 +15,6 @@ wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
 # - Firebug
 # - Scrolling defaults
 # - about:config warnings
-firefox http://getfirebug.com/releases/firebug/1.8/firebug-1.8.3.xpi
+firefox https://addons.mozilla.org/firefox/downloads/latest/1843/addon-1843-latest.xpi
 echo "user_pref(\"general.autoScroll\", true);" >> $HOME/.mozilla/firefox/*.default/prefs.js
 echo "user_pref(\"general.warnOnAboutConfig\", false);" >> $HOME/.mozilla/firefox/*.default/prefs.js
