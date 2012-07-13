@@ -1,19 +1,5 @@
 mkdir -p $HOME/.config/autostart
 
-# Campfire
-cat > $HOME/.config/autostart/vcampfire.desktop <<EOF
-[Desktop Entry]
-Type=Application
-Exec=vcampfire
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=vcampfire
-Name=butane
-Comment[en_US]=Monitors campfire
-Comment=Monitors campfire
-EOF
-
 # System monitor startup
 cat > $HOME/.config/autostart/sysmonitor.desktop <<EOF
 [Desktop Entry]
