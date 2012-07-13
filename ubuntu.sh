@@ -4,7 +4,7 @@
 ./ubuntu/repositories.sh
 ./ubuntu/networking.sh
 ./ubuntu/build_tools.sh
-./ubuntu/restricted_extras.sh # Causes a popup
+./ubuntu/restricted_extras.sh
 ./ubuntu/http_tools.sh
 ./ubuntu/filesystem.sh
 ./ubuntu/file_sharing.sh
