@@ -16,6 +16,6 @@ EOF
 "
 sudo rm /etc/resolv.conf
 sudo sh -c "echo \"nameserver $NAMESERVER1\nnameserver $NAMESERVER2\" > /etc/resolv.conf"
-sudo apt-get remove -y network-manager
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y wicd
 sudo adduser $USER netdev
+sudo apt-get remove -y network-manager
