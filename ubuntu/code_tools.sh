@@ -7,7 +7,7 @@ sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 # - gEdit
 # - sublime2
 sudo apt-get install -y gedit-plugins
-wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202%20Build%202165.tar.bz2 -O /tmp/sublime.tar.bz2
+wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.tar.bz2 -O /tmp/sublime.tar.bz2
 bunzip2 /tmp/sublime.tar.bz2
 tar -xvf /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
