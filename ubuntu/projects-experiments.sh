@@ -12,17 +12,16 @@ rvm gemset create experiment
 rvm rvmrc trust experiment
 cd experiment
 gem install rails
-sudo apt-get install -y nodejs
 rails new .
 sudo sh -c "cat >> /etc/hosts <<EOF
-192.168.1.228   experiment.local experiment.$DOMAIN
+192.168.1.220   experiment.local experiment.$DOMAIN
 EOF
 "
 sudo sh -c "cat >> /etc/network/interfaces <<EOF
 
-auto eth0:8
-iface eth0:8 inet static
-address 192.168.1.228
+auto eth0:0
+iface eth0:0 inet static
+address 192.168.1.220
 netmask 255.255.255.0
 broadcast 192.168.1.255
 network 192.168.1.0
@@ -31,7 +30,7 @@ EOF
 sudo sh -c "cat > /etc/apache2/sites-available/experiment <<EOF
 <VirtualHost *:80>
   ServerName experiment.local
-  ServerAlias experiment.$DOMAIN 192.168.1.228
+  ServerAlias experiment.$DOMAIN 192.168.1.220
   DocumentRoot $PROJECTS/experiment/public
   SetEnv VIX_APACHE 1
   
@@ -52,9 +51,9 @@ sudo sh -c "cat > /etc/apache2/sites-available/experiment <<EOF
   RewriteLogLevel 0
 </VirtualHost>
 
-<VirtualHost 192.168.1.228:443>
+<VirtualHost 192.168.1.220:443>
   ServerName experiment.local
-  ServerAlias experiment.$DOMAIN 192.168.1.228
+  ServerAlias experiment.$DOMAIN 192.168.1.220
   DocumentRoot $PROJECTS/experiment/public
   SetEnv VIX_APACHE 1
   
