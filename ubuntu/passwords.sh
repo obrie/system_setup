@@ -1,3 +1,3 @@
 # Password management
-# - KeepassX
-sudo apt-get install -y keepassx
+# - Keepass2
+sudo apt-get install -y keepass2
