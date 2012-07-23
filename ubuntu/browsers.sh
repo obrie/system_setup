@@ -6,10 +6,10 @@ rm /tmp/chrome.deb
 google-chrome "https://chrome.google.com/webstore/detail/occjjkgifpmdgodlplnacmkejpdionan?hl=en-US&hc=search&hcp=main"
 
 # Opera
-wget http://ftp.ussg.iu.edu/opera/linux/1151/opera_11.51.1087_i386.deb -O /tmp/opera.deb
-sudo dpkg -i /tmp/opera.deb
-rm /tmp/opera.deb
+sudo sh -c "echo 'deb http://deb.opera.com/opera stable non-free' > /etc/apt/sources.list.d/opera.sources.list"
 wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install -y opera
 
 # Firefox
 # - Firebug
