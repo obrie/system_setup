@@ -14,12 +14,12 @@ sudo apt-get install -y thin
 rvm ree
 rvm gemset create passenger
 rvm ree@passenger
-gem install passenger -v 3.0.11
+gem install passenger -v 3.0.14
 passenger-install-apache2-module --auto
 sudo sh -c "cat >> /etc/apache2/conf.d/passenger <<EOF
-LoadModule passenger_module $HOME/.rvm/gems/ree-1.8.7-2012.01@passenger/gems/passenger-3.0.11/ext/apache2/mod_passenger.so
-PassengerRoot $HOME/.rvm/gems/ree-1.8.7-2012.01@passenger/gems/passenger-3.0.11
-PassengerRuby $HOME/.rvm/wrappers/ree-1.8.7-2012.01@passenger/ruby
+LoadModule passenger_module $HOME/.rvm/gems/ree-1.8.7-2012.02@passenger/gems/passenger-3.0.14/ext/apache2/mod_passenger.so
+PassengerRoot $HOME/.rvm/gems/ree-1.8.7-2012.02@passenger/gems/passenger-3.0.14
+PassengerRuby $HOME/.rvm/wrappers/ree-1.8.7-2012.02@passenger/ruby
 RailsEnv development
 EOF
 "
