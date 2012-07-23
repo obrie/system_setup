@@ -8,12 +8,15 @@ sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.tar.bz2 -O /tmp/sublime.tar.bz2
 bunzip2 /tmp/sublime.tar.bz2
 tar -xvf /tmp/sublime.tar
+rm /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
 
 # Mime database
 wget https://github.com/janlelis/rubybuntu-mime/zipball/master -O /tmp/rubybuntu-mime.zip
 unzip /tmp/rubybuntu-mime.zip -d /tmp/rubybuntu-mime
+rm /tmp/rubybuntu-mime.zip
 sudo cp /tmp/rubybuntu-mime/*/*.xml /usr/share/mime/packages
+rm -rf /tmp/rubybuntu-mime
 sudo update-mime-database /usr/share/mime
 
 # Eclipse
