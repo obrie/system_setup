@@ -6,11 +6,12 @@ sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 # Text Editing
 # - sublime2
 # - gnote
-wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.tar.bz2 -O /tmp/sublime.tar.bz2
+wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.tar.bz2 -O /tmp/sublime.tar.bz2
 bunzip2 /tmp/sublime.tar.bz2
 tar -xvf /tmp/sublime.tar
 rm /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
+sudo ln -s /var/local/sublime/sublime_text /usr/bin/sublime
 sudo apt-get install -y gnote
 
 # Mime database
