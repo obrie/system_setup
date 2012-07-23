@@ -12,12 +12,11 @@ tar -xvf /tmp/sublime.tar
 rm /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
 sudo ln -s /var/local/sublime/sublime_text /usr/bin/sublime
-sudo sh -c "cat >> /usr/share/applications/sublime.desktop <<EOF
+sudo sh -c "cat > /usr/share/applications/sublime.desktop <<EOF
 [Desktop Entry]
 Version=1.0
 Name=Sublime Text 2
 GenericName=Text Editor
-
 Exec=sublime
 Terminal=false
 Icon=/var/local/sublime/Icon/48x48/sublime_text.png
@@ -29,6 +28,18 @@ X-Ayatana-Desktop-Shortcuts=NewWindow
 Name=New Window
 Exec=sublime -n
 TargetEnvironment=Unity
+"
+sh -c "cat > $HOME/.local/share/applications/defaults.list <<EOF
+[Default Applications]
+application/x-perl=sublime.desktop
+text/plain=sublime.desktop
+text/x-chdr=sublime.desktop
+text/x-csrc=sublime.desktop
+text/x-dtd=sublime.desktop
+text/x-java=sublime.desktop
+text/mathml=sublime.desktop
+text/x-python=sublime.desktop
+text/x-sql=sublime.desktop
 "
 sudo apt-get install -y gnote
 
