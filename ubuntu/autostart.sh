@@ -14,16 +14,16 @@ Comment[en_US]=System Monitor
 Comment=System Monitor
 EOF
 
-# Tomboy
-cat > $HOME/.config/autostart/tomboy.desktop <<EOF
+# Gnote
+cat > $HOME/.config/autostart/gnote.desktop <<EOF
 [Desktop Entry]
 Type=Application
-Exec=tomboy
+Exec=gnote
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name[en_US]=tomboy
-Name=tomboy
-Comment[en_US]=Tomboy
-Comment=Tomboy
+Name[en_US]=gnote
+Name=gnote
+Comment[en_US]=Gnote
+Comment=Gnote
 EOF
