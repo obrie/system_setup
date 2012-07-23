@@ -34,7 +34,6 @@
 # - PHPMyAdmin (Remove comment for AllowNoPassword in /etc/phpmyadmin/config.inc.php)
 # - Printers
 # - GMail Notifier
-# - GEdit
 # - Empathy
 # - Compizconfig (Screenshot, Zoom Desktop)
 # - Disable Screensaver
