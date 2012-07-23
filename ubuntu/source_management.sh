@@ -1,3 +1,5 @@
+source ./ubuntu/config.sh
+
 # Source management
 # - Git
 # - Subversion
