@@ -12,6 +12,12 @@ bunzip2 /tmp/sublime.tar.bz2
 tar -xvf /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
 
+# Mime database
+wget https://github.com/janlelis/rubybuntu-mime/zipball/master -O /tmp/rubybuntu-mime.zip
+unzip /tmp/rubybuntu-mime.zip -d /tmp/rubybuntu-mime
+sudo cp /tmp/rubybuntu-mime/*/*.xml /usr/share/mime/packages
+sudo update-mime-database /usr/share/mime
+
 # Eclipse
 sudo apt-get install -y eclipse
 sudo sh -c "cat >> /etc/eclipse.ini <<EOF

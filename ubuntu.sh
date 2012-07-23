@@ -10,7 +10,6 @@
 ./ubuntu/file_sharing.sh
 ./ubuntu/docs.sh
 ./ubuntu/languages.sh
-./ubuntu/syntax_highlighting.sh
 ./ubuntu/source_management.sh
 ./ubuntu/project_management.sh
 ./ubuntu/code_tools.sh
