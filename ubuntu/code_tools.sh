@@ -12,6 +12,24 @@ tar -xvf /tmp/sublime.tar
 rm /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
 sudo ln -s /var/local/sublime/sublime_text /usr/bin/sublime
+sudo sh -c "cat >> /usr/share/applications/sublime.desktop <<EOF
+[Desktop Entry]
+Version=1.0
+Name=Sublime Text 2
+GenericName=Text Editor
+
+Exec=sublime
+Terminal=false
+Icon=/var/local/sublime/Icon/48x48/sublime_text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnvironment=Unity
+"
 sudo apt-get install -y gnote
 
 # Mime database
