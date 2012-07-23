@@ -24,7 +24,6 @@
 ./ubuntu/browsers.sh
 ./ubuntu/chat.sh
 ./ubuntu/projects-base.sh
-./ubuntu/projects-libraries.sh
 ./ubuntu/projects-binaries.sh
 ./ubuntu/projects-experiments.sh
 ./ubuntu/projects-vendor.sh
