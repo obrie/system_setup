@@ -41,3 +41,9 @@ rvm 1.9.2@global
 gem install bundler
 rvm 1.9.3@global
 gem install bundler
+
+# RSpec
+cat > ~/.rspec <<EOF
+--color
+--drb
+EOF
