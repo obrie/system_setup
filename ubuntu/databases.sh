@@ -4,6 +4,7 @@
 # - PHPMyAdmin
 # - Sqlline
 # - Sqlite
+# - Postgresql
 sudo apt-get install -y libmemcached-dev memcached
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libmysqlclient-dev mytop mysql-server
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y phpmyadmin
@@ -12,3 +13,5 @@ sed '/^.*AllowNoPassword.*/ s/\/\/ //' /etc/phpmyadmin/config.inc.php > /tmp/con
 sudo apt-get install -y redis-server
 sudo apt-get install -y sqlline
 sudo apt-get install -y libsqlite3-dev sqlite3
+sudo apt-get install -y postgresql
+sudo -u postgres createuser -s -d -r $USER
