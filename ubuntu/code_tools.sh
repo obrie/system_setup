@@ -12,6 +12,7 @@ tar -xvf /tmp/sublime.tar
 rm /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
 sudo ln -s /var/local/sublime/sublime_text /usr/bin/sublime
+sudo ln -s /var/local/sublime/sublime_text /usr/bin/e
 sudo sh -c "cat > /usr/share/applications/sublime.desktop <<EOF
 [Desktop Entry]
 Version=1.0
