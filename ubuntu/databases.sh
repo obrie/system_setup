@@ -5,6 +5,7 @@
 # - Sqlline
 # - Sqlite
 # - Postgresql
+# - RabbitMQ
 sudo apt-get install -y libmemcached-dev memcached
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libmysqlclient-dev mytop mysql-server
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y phpmyadmin
@@ -15,3 +16,4 @@ sudo apt-get install -y sqlline
 sudo apt-get install -y libsqlite3-dev sqlite3
 sudo apt-get install -y postgresql
 sudo -u postgres createuser -s -d -r $USER
+sudo apt-get install -y rabbitmq-server
