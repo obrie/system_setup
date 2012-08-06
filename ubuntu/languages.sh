@@ -4,6 +4,7 @@ source ./ubuntu/config.sh
 # - Java
 # - Ruby
 # - PHP
+# - NodeJS
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install -y oracle-java7-installer
@@ -11,6 +12,7 @@ sudo update-java-alternatives -s java-7-oracle
 sudo apt-get install -y php5
 sudo apt-get install -y libreadline6-dev
 sudo apt-get install -y libapr1-dev libaprutil1-dev libsasl2-dev libssl-dev libxslt1-dev rake ruby ruby-dev rubygems
+sudo apt-get install -y nodejs
 
 # RVM (TODO: creates popup)
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
