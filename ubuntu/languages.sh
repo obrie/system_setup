@@ -26,6 +26,8 @@ rvm pkg install readline iconv openssl
 # RVM - Gems
 rvm install ree
 rvm install jruby
+rvm install jruby-1.7.0.preview2
+rvm alias create jruby-1.7 jruby-1.7.0.preview2
 rvm install 1.8.7
 rvm install 1.9.2
 rvm install 1.9.3
