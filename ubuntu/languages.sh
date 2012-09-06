@@ -2,19 +2,22 @@ source ./ubuntu/config.sh
 
 # Languages
 # - Java
-# - Ruby
-# - PHP
-# - NodeJS
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install -y oracle-java7-installer
 sudo update-java-alternatives -s java-7-oracle
+
+# - PHP
 sudo apt-get install -y php5
-sudo apt-get install -y libreadline6-dev
-sudo apt-get install -y libapr1-dev libaprutil1-dev libsasl2-dev libssl-dev libxslt1-dev rake ruby ruby-dev rubygems
+
+# Node JS
 sudo apt-get install -y nodejs
 
-# RVM (TODO: creates popup)
+# - Ruby
+sudo apt-get install -y libreadline6-dev
+sudo apt-get install -y libapr1-dev libaprutil1-dev libsasl2-dev libssl-dev libxslt1-dev rake ruby ruby-dev rubygems
+
+# - Ruby - RVM (TODO: creates popup)
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 cat >> ~/.bashrc <<EOF
 
@@ -23,7 +26,7 @@ EOF
 source $HOME/.rvm/scripts/rvm
 rvm pkg install readline iconv openssl
 
-# RVM - Gems
+# - Ruby - RVM - Gems
 rvm install ree
 rvm install jruby
 rvm install jruby-1.7.0.preview2
@@ -33,7 +36,7 @@ rvm install 1.9.2
 rvm install 1.9.3
 rvm --default use ree
 
-# Bundler
+# - Ruby - Bundler
 rvm ree@global
 gem install bundler
 rvm jruby@global
@@ -46,7 +49,7 @@ gem install bundler
 rvm 1.9.3@global
 gem install bundler
 
-# RSpec
+# - Ruby - RSpec
 cat > ~/.rspec <<EOF
 --color
 --drb
