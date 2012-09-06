@@ -1,4 +1,3 @@
 # Test tools
-
-# PhantomJS
+# - PhantomJS
 sudo apt-get install -y phantomjs

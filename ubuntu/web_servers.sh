@@ -1,16 +1,17 @@
 source $HOME/.rvm/scripts/rvm
 
-# Web server
+# Web servers
 # - Apache
 # -- Modules (ssl, rewrite, proxy)
 # -- SSL certs
-# - Thin
 sudo apt-get install -y apache2-prefork-dev
 sudo a2enmod ssl rewrite proxy proxy_balancer proxy_connect proxy_http
 sudo mkdir /etc/apache2/ssl
+
+# - Thin
 sudo apt-get install -y thin
 
-# Passenger
+# - Passenger
 rvm ree
 rvm gemset create passenger
 rvm ree@passenger
@@ -24,5 +25,5 @@ RailsEnv development
 EOF
 "
 
-# Restart Apache
+# -- Restart Apache
 sudo /etc/init.d/apache2 restart
