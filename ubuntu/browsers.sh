@@ -7,7 +7,7 @@ rm /tmp/chrome.deb
 google-chrome "https://chrome.google.com/webstore/detail/occjjkgifpmdgodlplnacmkejpdionan?hl=en-US&hc=search&hcp=main"
 
 # - Opera
-sudo sh -c "echo 'deb http://deb.opera.com/opera stable non-free' > /etc/apt/sources.list.d/opera.sources.list"
+sudo add-apt-repository -y "deb http://deb.opera.com/opera stable non-free"
 wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y opera
