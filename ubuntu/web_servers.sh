@@ -2,8 +2,6 @@ source $HOME/.rvm/scripts/rvm
 
 # Web servers
 # - Apache
-# -- Modules (ssl, rewrite, proxy)
-# -- SSL certs
 sudo apt-get install -y apache2-prefork-dev
 sudo a2enmod ssl rewrite proxy proxy_balancer proxy_connect proxy_http
 sudo mkdir /etc/apache2/ssl
@@ -25,5 +23,5 @@ RailsEnv development
 EOF
 "
 
-# -- Restart Apache
+# - Restart Apache
 sudo /etc/init.d/apache2 restart
