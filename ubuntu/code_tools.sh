@@ -4,12 +4,11 @@ sudo apt-get install -y ack-grep
 sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 
 # - Sublime Text 2
-wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.tar.bz2 -O /tmp/sublime.tar.bz2
+wget "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1$(if [ "$(dpkg --print-architecture)" == "amd64" ]; then echo "%20x64"; fi).tar.bz2" -O /tmp/sublime.tar.bz2
 bunzip2 /tmp/sublime.tar.bz2
 tar -xvf /tmp/sublime.tar
 rm /tmp/sublime.tar
 sudo mv Sublime\ Text\ 2 /var/local/sublime
-sudo ln -s /var/local/sublime/sublime_text /usr/bin/sublime
 sudo ln -s /var/local/sublime/sublime_text /usr/bin/e
 sudo sh -c "cat > /usr/share/applications/sublime.desktop <<EOF
 [Desktop Entry]
@@ -41,9 +40,6 @@ text/mathml=sublime.desktop
 text/x-python=sublime.desktop
 text/x-sql=sublime.desktop
 "
-
-# - GNote
-sudo apt-get install -y gnote
 
 # - Mime database
 wget https://github.com/janlelis/rubybuntu-mime/zipball/master -O /tmp/rubybuntu-mime.zip
