@@ -27,7 +27,6 @@
 ./ubuntu/projects-binaries.sh
 ./ubuntu/projects-experiments.sh
 ./ubuntu/projects-vendor.sh
-./ubuntu/autostart.sh
 ./ubuntu/reboot.sh
 # LOGOUT / LOGIN
 # Other things to set up:
