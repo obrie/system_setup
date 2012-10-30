@@ -22,4 +22,7 @@ sudo apt-get install -y postgresql
 sudo -u postgres createuser -s -d -r $USER
 
 # - RabbitMQ
+sudo add-apt-repository -y "deb http://www.rabbitmq.com/debian/ testing main"
+wget -O - http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -
+sudo apt-get update
 sudo apt-get install -y rabbitmq-server
